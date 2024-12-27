@@ -1,0 +1,367 @@
+*{
+  margin: 0;
+  padding: 0;
+
+}
+body a{
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+body p{
+  margin: 0;
+}
+body input{
+  border: 0;
+  background-color: rgb(248, 246, 246);
+  border-radius: 5px;
+}
+/* HEADER PART */
+/* offer */
+.top-header-container{
+  background-color: black;
+  color: white;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 120px;
+  font-weight: 'inter';
+}
+.shopnow-button a{
+  color: white;
+  text-decoration: underline;
+}
+.top-nav{
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  align-content: center;
+  gap: 10%;
+}
+.top-header-text{
+  display: flex;
+  padding-left:20% ;
+  gap: 10px;
+}
+
+#language{
+  background-color: black;
+  color: white;
+  border: 0px;
+}
+/* offer close */
+
+
+.header-container{
+  display: flex;
+  align-items: center;
+  padding: 2% 0;
+  flex-wrap: wrap;
+  font-weight: 'poppins';
+}
+.eh{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  
+
+}
+.line-nav{
+  font-size: 21px;
+  font-weight: 800;
+}
+.homes{
+  display: flex;
+  text-wrap:nowrap;
+  gap: 25px;
+  font-size: 21px;
+  font-weight:100;
+}
+
+.alogo{
+  display: flex;
+  gap: 20px;
+}
+
+
+.search{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  background-color:  rgb(248, 246, 246);
+  border-radius: 5px;
+  width: fit-content;
+  gap: 2px;
+}
+.search button{
+  border: 0;
+  padding: 3px;
+}
+.search input{
+  width: 100%;
+  font-size: 16px;
+  padding-left: 3px;
+}
+.search button i {
+  font-size: 21px;
+}
+.line{
+  padding-bottom:3px ;
+  background-color: rgb(220, 220, 220);
+}
+.icons{
+  display: flex;
+  font-size: 21px;
+  
+  
+}
+.icons i{
+  display: grid;
+  place-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.icons i:hover{
+  background-color: #df4444;
+  color: white;
+}
+.icon3{
+  position: relative;
+}
+.manu-options a{
+  color: white;
+  text-decoration: none;
+}
+.manu-options a:hover{
+  color: white;
+}
+.icons {
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+
+.icon1, .icon2, .icon3 {
+  position: relative;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.5s, box-shadow 0s;
+  border-radius: 50%;
+}
+
+.icon1:hover, .icon2:hover, .icon3:hover{
+  background-color: #df4444;
+  color: white;
+  transform: scale(1.1);
+  z-index: 99;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+  
+  
+}
+
+.icon3 i {
+  transition: transform 3s, box-shadow 0s;
+  
+ 
+}
+.icon3:hover i {
+  color: white;
+  border-radius: 50%;
+ 
+}
+.menu-options {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right:  0px;
+  background-color: rgba(59, 57, 57, 0.6);
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: transform 3s;
+  width: 210px;
+  
+}
+
+.icon3:hover .menu-options {
+ 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position:absolute;
+  /* z-index: 999; */
+  overflow: visible;
+}
+
+.menu-option {
+  padding: 5px 5px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  
+  
+}
+
+.menu-option:hover {
+  background-color: rgba(237, 235, 235, 0.5);
+  width: 100%;
+  background-color:none;
+}
+.menu-option i{
+font-size: 14px;
+height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  
+}
+.menu-option:hover i{
+  background-color:#df4444 ;
+  
+}
+.menu-option a{
+  color: white;
+}
+
+/* Footer  */
+
+.contactt{
+  background: #000000;
+  color: white;
+  margin-top: 10%;
+  padding-top: 3%;
+  padding-bottom: 0;
+  display: block;
+}
+ .footer{
+  display: grid;
+  padding-bottom: 3%;
+  grid-template-columns: repeat(5 1fr);
+  grid-template-areas: 
+  "exclusive support account quicklink downloadapp "
+  ;
+gap: 2rem;
+}
+.footer h2{
+font-size: 24px;
+padding-bottom: 5%;
+font-weight: bolder;
+}
+.footer h4{
+  font-size: 16px;
+  padding-bottom: 5%;
+}
+.footer p{
+  font-size: 11px;
+  padding-bottom: 5px;
+}
+.Exclusive{
+  grid-area: exclusive;
+
+}
+.footer a{
+ 
+    color: white;
+    text-decoration: none;
+}
+.input-container {
+  position: relative;
+  width: fit-content;
+  font-size: 11px;
+  
+  
+}
+
+.input-container input {
+  width: fit-content;
+  padding: 5%;
+  padding-right: 25px; 
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: #000000;
+  color: white;
+  
+}
+.logo-button {
+  position: absolute;
+  top: 50%;
+  right: 5px; 
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+.logo-button svg {
+  width: 22px; 
+  height: 24px;
+  color: white;
+}
+.support{
+  grid-area: support;
+  width: 100%;
+}
+.account{
+  grid-area: account;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.quicklink{
+  grid-area: quicklink;
+  border: none;
+}
+.quicklink p{
+  border: none;
+}
+.downloadapp{
+  grid-area:downloadapp;
+}
+.social-icons{
+  display: flex;
+  gap: 1rem;
+  padding-top: 20%;
+ 
+}
+.social-icons i{
+  font-size: 24px;
+  width: 100%;
+
+}
+.social-icons i:hover{
+  color: #cac6c6;
+  position: relative;
+  top: -5px;
+  cursor: pointer;
+  
+  
+}
+.last-footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(9, 9, 9);
+  padding:1%;
+  border-top: 1px solid gray;
+  color: rgb(96, 98, 98);
+  gap: 2px;
+
+}
+.last-futter p{
+  margin-bottom: 0;
+}
+.line-container a{
+  text-decoration: none;
+  color: black;
+}
+.line-container a:hover{
+  color: #DB4444;
+} 
+  
+

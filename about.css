@@ -1,0 +1,161 @@
+*{
+    
+    padding: 0;
+}
+
+
+.home-about a{
+    color: black;
+    text-decoration: none;
+    
+}
+.home-about{
+margin-left: 8%;
+
+padding-top: 3%;
+display: flex;
+gap: 10px;
+width: fit-content
+
+
+}
+.our-story-parent{
+    display: flex;
+    height: 609px;
+    /* align-items: center; */
+    overflow: hidden;
+    position: relative;
+    gap: 2rem;
+    padding-top: 3%;
+}
+.our-story-text{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.our-story-text p{
+    font-size: 16px;
+}
+.our-story-text h2{
+    font-size: 54px;
+    font-weight: 500;
+    padding-bottom: 2rem;
+}
+.our-story-image{
+    width: 50%;
+    position: relative;
+}
+.our-story-image img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+.sales{
+    padding-top: 5%;
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+}
+.sales div{
+    border: 2px solid rgb(205, 204, 204);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding: 2% 3%;
+    gap: 7px;
+border-radius: 5px;
+
+    
+}
+.sales div:hover{
+    background-color: #db4444;
+    color: white;
+}
+.sales i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 70px;
+    font-size: 24px;
+    color: white;
+background-color: black;
+/* box-shadow:10px 10px 10px lightslategray; */
+border: 10px solid rgb(186, 186, 186)  ;
+border-radius: 50%;
+}
+.sales div:hover i{
+    background-color: rgba(255, 255, 255);
+    color: black;
+    border: 10px solid rgba(220, 118, 118, 0.9)  ;
+}
+.sales h2{
+    display: flex;
+    justify-content:center ;
+    font-size: 32px;
+    font-weight: bolder;
+    margin-bottom: 0;
+
+}
+.sales p{
+    font-family: 16px;
+    margin-bottom: 0;
+    
+}
+.workers{
+    padding-top: 12%;
+    display: flex;
+    justify-content: space-between;
+  height: 100%;
+}
+.founder{
+    
+  
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 400px;
+    
+}
+.founder img{
+    position: relative;
+    width: 70%;
+    
+    padding: 7% 3% 0% 2%;
+}
+.founder p{
+    width: fit-content;
+}
+.name{
+    font-size: 32px;
+    font-weight: bold;
+    padding-top:5% ;
+}
+.founder-image{
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+.worker-socialmedia i{
+    color: black;
+   
+}
+.worker-socialmedia{
+    display: flex;
+    gap: 10px;
+    
+}
+.swiper-pagination .swiper-pagination-bullet{
+    background-color: rgb(105, 105, 105);
+    height: 12px;
+    width: 12px
+}
+.swiper-pagination [aria-current] {
+    border: 3px solid #cccccc;
+    background-color: rgb(250, 4, 4);
+}
+

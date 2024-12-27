@@ -1,0 +1,96 @@
+.account-header{
+    display: flex;
+    justify-content: space-between; 
+    padding-top: 5%;  
+}
+.account-header p{
+    display: inline-block;
+    margin: 0;
+}
+.account-body{
+    display: grid;
+    grid-template-columns: 25% 70% ;
+    gap: 5%;
+    width: 100%;
+    height: 100%;
+padding-top: 5%;
+}
+.accounts h2{
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+}
+.accounts p{
+    margin-bottom: 10px;
+    padding-left: 20px;
+    color: gray;
+}
+.edit-profile{
+    padding: 5%;
+    height: 100%;
+    border-radius: 7px;
+    box-shadow: 0px 0px 20px 4px#cdcdcd;
+    
+    
+}
+.edit-profile h2{
+    font-size: 24px;
+    font-weight: bold;
+    color: #df4444;
+    padding-bottom: 20px;
+}
+.first-name{
+grid-area:first ;
+}
+.last-name{
+    grid-area: last;
+}
+.email{
+    grid-area: email;
+}
+.address{
+    grid-area: address;
+}
+.password-change{
+    grid-area: password;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.save-cancel{
+    grid-area:buttons ;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    
+}
+.save-cancel button{
+    padding: 10px 20px;
+    background-color: #df4444;
+    color: white;
+    border-radius: 7px;
+    border: none;
+}
+.edit-profile-div{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows:auto auto auto auto ;
+    justify-content: space-evenly;
+    grid-template-areas:
+    "first last "
+    "email address"
+    "password password"
+    ". buttons"
+
+    ;
+}
+.edit-profile-div input{
+    padding: 10px 10px;
+    width: 100%;
+}
+.edit-profile-div label{
+    padding: 10px 0px;
+}
