@@ -782,8 +782,8 @@
                 <h6>Black and White version of the PS5<br>coming out on sale.</h6>
                 <a href="">Shop Now</a>
             </div>
-            <img src="playstation.png" alt="">
-
+            <img class="mainImg" src="playstation.png" alt="">
+            
         </div>
 
         <div class="womenscollection">
@@ -791,7 +791,7 @@
                 <h1>Women's Collections</h1>
                 <h6>Featured women collection that<br> give you another vibe.</h6>
                 <a href="">Shop Now</a>
-            </div><img src="women.png" alt="">
+            </div><img class="mainImg" src="women.png" alt="">
         </div>
         <div class="speaker">
             <div class="stext">
@@ -800,7 +800,7 @@
                 <a href="">Shop Now</a>
 
             </div>
-            <div class="speaker-image"><img src="speaker.png" alt=""></div>
+            <div class="speaker-image"><img class="mainImg" src="speaker.png" alt=""></div>
 
         </div>
         <div class="perfume">
@@ -809,10 +809,41 @@
                 <h6>GUCCI INTENSE OLD EDP</h6>
                 <a href="">Shop Now</a>
             </div>
-            <div class="perfume-image"><img src="gucci.png" alt=""></div>
+            <div class="perfume-image"><img class="mainImg" src="gucci.png" alt="">
+                
+                </div>
         </div>
+        
     </div>
 </div>
+<div id="imageModal" class="modal">
+    <span id="closeBtn">&times;</span>
+    <img id="modalImg">
+  </div>
+<script>
+    // Get elements
+    const mainImg = document.querySelectorAll(".mainImg");
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.getElementById("closeBtn");
+  
+   // Add click event to each image
+mainImg.forEach(img => {
+  img.onclick = function () {
+    modal.style.display = "flex";
+    modalImg.src = this.src; // Set modal image source to clicked image source
+     mainImg.style.hover="none"
+  };
+});
+     
+    
+  
+    // Close modal on close button click
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    };
+  </script>
+  
 <div class="container">
     <div class="service">
         <div class="services-type">

@@ -327,6 +327,7 @@ font-weight: bolder;
   display: flex;
   gap: 1rem;
   padding-top: 20%;
+  width: 77%;
  
 }
 .social-icons i{

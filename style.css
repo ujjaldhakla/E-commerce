@@ -535,7 +535,8 @@ transition: transform 1s;
     width: 60%;
     height: 70%;
     display: flex;
-    
+    transition: 1s;
+   
     
   }
 .ptext{
@@ -663,6 +664,38 @@ width: 100%;
     "playstaiton        speaker      perfume"
     ;
     gap: 10px;
+  }
+  .mainImg {
+    cursor: pointer;
+    
+    transition: 0.3s;
+  }
+
+  .mainImg:hover { opacity: 0.7; }
+
+  /* Modal styling */
+  .modal {
+    display: none; 
+    position: fixed; 
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(26, 26, 26, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .modal img {
+    width: 100%; max-width: 500px;
+    background-color: #000000;
+  }
+
+  .modal span {
+    position: absolute;
+    top: 30px; right: 50px;
+    font-size: 30px; 
+    color: white; 
+    cursor: pointer;
   }
   .service{
     display: flex;
