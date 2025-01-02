@@ -1,29 +1,9 @@
 <special-header></special-header>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>function startCountdown() {
-        const endDate = new Date("2024-12-31T23:59:59").getTime();
-        setInterval(() => {
-            const now = new Date().getTime();
-            const distance = endDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.querySelector('.days').textContent = `${days} :`;
-            document.querySelector('.hours').textContent = `${hours} :`;
-            document.querySelector('.minuts').textContent = `${minutes} :`;
-            document.querySelector('.seconds').textContent = seconds;
-        }, 1000);
-    }
-    startCountdown();
-</script>
+<script src="ecommerce-js.js"></script>
 <script src="headerFooterManager.js" defer></script>
 <script src="https://kit.fontawesome.com/73c74f1e46.js" crossorigin="anonymous"></script>
-
-
-
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <div class="container">
     <div class="icontainer">
         <div class="frame768">
@@ -45,7 +25,7 @@
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="mainimg">
+                        <div class="mainimgg">
                             <div class="ilogo">
                                 <div class="wrapper1">
                                     <div class="apple"><img src="apple.png" alt="">
@@ -66,7 +46,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="mainimg">
+                        <div class="mainimgg">
                             <div class="ilogo">
                                 <div class="wrapper1">
                                     <div class="apple"><img src="apple.png" alt="">
@@ -85,7 +65,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="mainimg">
+                        <div class="mainimgg">
                             <div class="ilogo">
                                 <div class="wrapper1">
                                     <div class="apple"><img src="apple.png" alt="">
@@ -104,7 +84,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="mainimg">
+                        <div class="mainimgg">
                             <div class="ilogo">
                                 <div class="wrapper1">
                                     <div class="apple"><img src="apple.png" alt="">
@@ -123,7 +103,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="mainimg">
+                        <div class="mainimgg">
                             <div class="ilogo">
                                 <div class="wrapper1">
                                     <div class="apple"><img src="apple.png" alt="">
@@ -147,30 +127,10 @@
             </div>
         </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const swiper = new Swiper('.mySwiper', {
-                    loop: true, // Enables infinite looping
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true, // Allows clicking on pagination bullets
-                    },
-                    autoplay: {
-                        delay: 3000, // Auto-swipe every 3 seconds
-                        disableOnInteraction: false, // Keeps autoplay active even after user interaction
-                    },
-                });
-            });
-        </script>
-
 
     </div>
 
 </div>
-
-
-
 <div class="container">
     <div class="today">
         <div class="alltime">
@@ -206,8 +166,6 @@
                 <i class="fa-solid fa-arrow-left" id="prevEll"></i>
                 <i class="fa-solid fa-arrow-right" id="nextEll"></i>
             </div>
-
-
         </div>
     </div>
 </div>
@@ -332,8 +290,6 @@
         </div>
     </div>
 </div>
-
-
 
 <div class="container">
     <div class="viewproduct"><button>View All Product</button></div>
@@ -724,34 +680,7 @@
         </div>
     </div>
 </div>
-
-
-  <!-- Swiper JS -->
-
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper('.exoplore', {
-      slidesPerView: 4,
-      direction: getDirection(),
-      navigation: {
-        nextEl: '#nextll',
-        prevEl: '#prevll',
-      },
-      on: {
-        resize: function () {
-          swiper.changeDirection(getDirection());
-        },
-      },
-    });
-    function getDirection() {
-        var windowWidth = window.innerWidth;
-        var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
-
-        return direction;
-    }
-   
-  </script>
+  
 <div class="container">
     <div class="viewproduct"><button>View All Product</button></div>
 </div>
@@ -820,30 +749,6 @@
     <span id="closeBtn">&times;</span>
     <img id="modalImg">
   </div>
-<script>
-    // Get elements
-    const mainImg = document.querySelectorAll(".mainImg");
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImg");
-    const closeBtn = document.getElementById("closeBtn");
-  
-   // Add click event to each image
-mainImg.forEach(img => {
-  img.onclick = function () {
-    modal.style.display = "flex";
-    modalImg.src = this.src; // Set modal image source to clicked image source
-     mainImg.style.hover="none"
-  };
-});
-     
-    
-  
-    // Close modal on close button click
-    closeBtn.onclick = function () {
-      modal.style.display = "none";
-    };
-  </script>
-  
 <div class="container">
     <div class="service">
         <div class="services-type">
@@ -881,28 +786,4 @@ mainImg.forEach(img => {
 </div>
 <special-footer></special-footer>
 </body>
-<!-- product swiper -->
-<script>
-    var swiper = new Swiper('.myproducts', {
-        slidesPerView: 4,
-        direction: getDirection(),
-        navigation: {
-            nextEl: '#nextEll',
-            prevEl: '#prevEll',
-        },
-        on: {
-            resize: function () {
-                swiper.changeDirection(getDirection());
-            },
-        },
-    });
-
-    function getDirection() {
-        var windowWidth = window.innerWidth;
-        var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
-
-        return direction;
-    }
-</script>
-<script src="countdown.js"></script>
 </html>

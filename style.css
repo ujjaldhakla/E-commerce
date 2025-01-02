@@ -60,7 +60,11 @@ border-right: 3px solid lightgray;
 font-size: 16px;
 font-family: 'poppins';
 }
-.mainimg{
+.slide-container{
+  height: 344px;
+  width: 892px;
+}
+.mainimgg{
   width: 892px;
   height: 344px;
  
@@ -78,27 +82,22 @@ font-family: 'poppins';
   
  }
  .iphone{
-  justify-content: end;
-  align-items: center;
+padding-top: 30px;
   width: 100%;
   height: 100%;
-  /* z-index: 1; */
- /* position: relative; */
+ 
  
 }
 .iphone img{
- height: 100%;
- width: 100%;
+ height: 85%;
+ width: 85%;
  position: relative;
   z-index: -1;
   
   
 }
  
- /* .framechild{
-  display: flex;
-  justify-content: space-between;
- } */
+
  .wrapper1{
 
   display: flex;
@@ -327,8 +326,6 @@ transition: transform 1s;
   display: flex;
   justify-content: center;
   padding-top: 5%;
-  
-  
   
 }
 .viewproduct button{
@@ -667,11 +664,10 @@ width: 100%;
   }
   .mainImg {
     cursor: pointer;
-    
     transition: 0.3s;
   }
 
-  .mainImg:hover { opacity: 0.7; }
+  .mainImg:hover { opacity: 0.8; }
 
   /* Modal styling */
   .modal {
