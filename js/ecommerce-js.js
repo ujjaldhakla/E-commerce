@@ -1,6 +1,6 @@
 // time count down
 function startCountdown() {
-        const endDate = new Date("2024-12-31T23:59:59").getTime();
+        const endDate = new Date("2025-12-31T23:59:59").getTime();
         setInterval(() => {
             const now = new Date().getTime();
             const distance = endDate - now;

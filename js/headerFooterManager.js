@@ -1,32 +1,13 @@
+
 class SpecialHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <!DOCTYPE html>
-
-<head>
-    <meta charset="utf-8">
-    
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <script src="headerFooterManager.js" defer></script>
-    <link rel="stylesheet" href="ccount.css">
-    <link rel="stylesheet" href="sign-up.css">
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="contactus.css">
-    <link rel="stylesheet" href="headerfooter.css">
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    
-
-</head>
+       
 
 
-<body>
+
+
+
         <div class="top-header-container">
             <div class="top-nav">
                 <div class="top-header-text">
@@ -92,6 +73,7 @@ class SpecialHeader extends HTMLElement {
 
 class SpecialFooter extends HTMLElement {
     connectedCallback() {
+        console.log('SpecialHeader rendered');
         this.innerHTML = `
         <div class="contactt">
             <div class="container">
@@ -144,9 +126,39 @@ class SpecialFooter extends HTMLElement {
                 <i class="fa-regular fa-copyright"></i>
                 <p>Copyright Ujjal 2024. All rights reserved.</p>
             </div>
-        </div>`;
+        </div>
+       
+`;
     }
 }
 
+
+class SpecialHead extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <title>Custom Elements</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/ccount.css">
+        <link rel="stylesheet" href="css/sign-up.css">
+        <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/contactus.css">
+        <link rel="stylesheet" href="css/headerfooter.css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+<script src="ecommerce-js.js" defer></script>
+<script src="headerFooterManager.js" defer></script>
+<script src="https://kit.fontawesome.com/73c74f1e46.js" crossorigin="anonymous" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" defer></script>
+        `;
+    }
+}
+
+customElements.define('special-head', SpecialHead);
 customElements.define('special-header', SpecialHeader);
 customElements.define('special-footer', SpecialFooter);
