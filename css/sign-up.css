@@ -27,7 +27,7 @@
 .sign-up-account {
     display: flex;
     flex-direction: column;
-    gap: 5%;
+    gap: 40px;
     justify-content: center;
 }
 

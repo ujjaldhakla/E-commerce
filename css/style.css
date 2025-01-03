@@ -12,6 +12,9 @@ body{
 body p{
   font-family: 'poppins';
 }
+body button{
+  cursor: pointer;
+}
 
 /* swiper css*/
 .swiper-pagination .swiper-pagination-bullet{

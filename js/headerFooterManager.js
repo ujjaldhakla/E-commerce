@@ -48,7 +48,7 @@ class SpecialHeader extends HTMLElement {
                         </div>
                         <div class="icons">
                             <div class="icon1"><i class="fa-regular fa-heart"></i></div>
-                            <div class="icon2"><i class="fa-solid fa-cart-shopping"></i></div>
+                            <div class="icon2"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></div>
                             <div class="icon3">
                                 <i class="fa-regular fa-user"></i>
                                <span> <div class="menu-options">
@@ -147,6 +147,7 @@ class SpecialHead extends HTMLElement {
         <link rel="stylesheet" href="css/login.css">
         <link rel="stylesheet" href="css/contactus.css">
         <link rel="stylesheet" href="css/headerfooter.css">
+         <link rel="stylesheet" href="css/cart.css">
         <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
