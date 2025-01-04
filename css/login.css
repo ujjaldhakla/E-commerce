@@ -58,7 +58,7 @@
     height: 30px;
     width: 100px;
    
-    
+    border: none;
 }
 .login-and-forget{
     display: flex;
@@ -71,4 +71,5 @@
 .login-button a{
     color: white;
     text-decoration: none;
+   
 }

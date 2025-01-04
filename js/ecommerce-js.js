@@ -111,4 +111,17 @@ mainImg.forEach(img => {
 
   //image modeling end
 
+// JavaScript to highlight the current link based on the URL
 
+document.addEventListener('DOMContentLoaded',()=>{
+window.onload = function () {
+  const links = document.querySelectorAll(".homes a");
+  const currentURL = window.location.href;
+
+  links.forEach(link => {
+      if (link.href === currentURL) {
+          link.classList.add("active");
+      }
+  });
+};
+});

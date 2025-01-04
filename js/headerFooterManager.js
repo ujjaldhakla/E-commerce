@@ -2,12 +2,6 @@
 class SpecialHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-       
-
-
-
-
-
         <div class="top-header-container">
             <div class="top-nav">
                 <div class="top-header-text">
@@ -36,7 +30,7 @@ class SpecialHeader extends HTMLElement {
                     <div class="eh">
                         <div class="line-nav">Exclusive</div>
                         <div class="homes">
-                            <div class="home"><a href="Ecommerce.html">Home</a></div>
+                            <div class="home"><a href="Ecommerce.html " >Home</a></div>
                             <div class="contact"><a href="contactus.html">Contact</a></div>
                             <div class="about"><a href="about.html">About</a></div>
                             <div class="sign-upp"><a href="Sign-up.html">Sign-Up</a></div>
@@ -148,6 +142,7 @@ class SpecialHead extends HTMLElement {
         <link rel="stylesheet" href="css/contactus.css">
         <link rel="stylesheet" href="css/headerfooter.css">
          <link rel="stylesheet" href="css/cart.css">
+         <link rel="stylesheet" href="css/checkOut.css">
         <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">

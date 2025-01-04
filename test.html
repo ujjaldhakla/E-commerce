@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <script src="js/headerFooterManager.js"></script> -->
+<special-head></special-head>
+</head>
+<body>
+<special-header></special-header>
+<div class="cart-products">
+    <div class="cart-product-details">
+        <div class="cart-product-img">
+            <div class="cart-delete">&times;</div>
+            <img src="images/mp3.png" alt="Music Player">
+            <p>Music Player</p>
+        </div>
+        <div class="product-price">$767</div>
+        <div class="product-quantity">
+            <input type="number" value="1" min="1" max="10">
+        </div>
+        <div class="product-subtotal">$856</div>
+    </div>
+
+    <div class="cart-product-details">
+        <div class="cart-product-img">
+            <div class="cart-delete">&times;</div>
+            <img src="images/game.png" alt="Gaming Controller">
+            <p>Gaming Controller</p>
+        </div>
+        <div class="product-price">$767</div>
+        <div class="product-quantity">
+            <input type="number" value="1" min="1" max="10">
+        </div>
+        <div class="product-subtotal">$856</div>
+    </div>
+
+    <div class="cart-product-details">
+        <div class="cart-product-img">
+            <div class="cart-delete">&times;</div>
+            <img src="images/playstation.png" alt="Play Station">
+            <p>Play Station</p>
+        </div>
+        <div class="product-price">$767</div>
+        <div class="product-quantity">
+            <input type="number" value="1" min="1" max="10">
+        </div>
+        <div class="product-subtotal">$856</div>
+    </div>
+</div>
+
+<style>
+.cart-products {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.cart-product-details {
+    display: flex;
+    padding: 20px 45px;
+    justify-content: space-between;
+    box-shadow: 0 0 7px 5px rgba(228, 228, 228, 0.2);
+    border-radius: 5px;
+    align-items: center;
+}
+
+.cart-product-details div {   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-product-img {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.cart-product-img img {
+    height: 54px;
+    width: 54px;
+}
+
+.cart-product-img p {
+    margin: 0;
+}
+
+.cart-delete {
+    background-color: red;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+.cart-delete:hover {
+    transform: scale(1.2);
+}
+
+.product-quantity input {
+    height: 44px;
+    width: 72px;
+    font-size: 14px;
+    background-color: white;
+    text-align: center;
+    border: 2px solid black;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    opacity: 1;
+    height: 30px;
+}
+</style>
+
+</body>
+</html>

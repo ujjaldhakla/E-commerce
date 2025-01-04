@@ -16,15 +16,18 @@ body img {
     padding: 25px 45px;
     margin-top: 5%;
     justify-content: space-between;
-    box-shadow: 0 0 7px 5px rgba(228, 228, 228, 0.196);
+    box-shadow: 0 0 7px 5px rgba(130, 129, 129, 0.282);
     border-radius: 5px;
     /* gap: 332px; */
 
 }
-
-.cart-titles p {
-    width: 74px;
+.cart-titles :nth-child(1){
+    width: 21%;
 }
+
+/* .cart-titles p {
+    width: 74px;
+} */
 
 .cart-products {
     padding-top: 5%;
@@ -38,17 +41,16 @@ body img {
     /* border: 1px solid black; */
     padding: 20px 45px;
     justify-content: space-between;
-    box-shadow: 0 0 7px 5px rgba(228, 228, 228, 0.196);
+    box-shadow: 0 0 7px 5px rgba(130, 129, 129, 0.282);
     border-radius: 5px;
     /* gap: 332px; */
 
 }
 
-.cart-product-details div {
-    width: 74px;
+.cart-product-details div {   
     display: flex;
     align-items: center;
-    justify-content: center;
+    
 
 }
 
@@ -59,9 +61,15 @@ body img {
 }
 .cart-product-img{
     position: relative;
+width: 20%;
 }
+.cart-product-img p{
+    padding-left: 15px;
+}
+
+ 
 .cart-product-img .cart-delete {
-    background-color: red;
+    background-color: #db4444;
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -70,6 +78,8 @@ body img {
     top: 0;
     left: 0;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
     &:hover{
         transform: scale(1.2,1.2);
     }
@@ -132,12 +142,14 @@ width: 90%;
 height: max-content;
 padding: 13px 13px;
 font-size: 16px;
+background-color: white;
+border: 2px solid black;
 }
 .coupon-button button{
 width: 50%;
 height: max-content;
-padding: 9px 13px;
-background-color:rgb(237, 73, 73) ;
+padding: 13px 13px;
+background-color:#db4444 ;
 border: none;
 font-size: 16px;
 color: white;
@@ -165,16 +177,21 @@ border-radius: 5px;
     padding-bottom: 10px;
 }
 .bord{
- border-bottom: 2px solid rgb(113, 113, 113);
+ border-bottom: 3px solid rgb(212, 211, 211);
 }
 .process-checkout{
     display: flex;
     justify-content: center;
 }
-.process-checkout button{
+.process-checkout a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.process-checkout a button{
     width: 50%;
     height: 40px;
-    background-color: rgb(225, 88, 88);
+    background-color: #db4444;
     color: white;
     border: none;
     border-radius: 5px;
