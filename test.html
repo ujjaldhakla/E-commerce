@@ -6,115 +6,132 @@
 </head>
 <body>
 <special-header></special-header>
-<div class="cart-products">
-    <div class="cart-product-details">
-        <div class="cart-product-img">
-            <div class="cart-delete">&times;</div>
-            <img src="images/mp3.png" alt="Music Player">
-            <p>Music Player</p>
-        </div>
-        <div class="product-price">$767</div>
-        <div class="product-quantity">
-            <input type="number" value="1" min="1" max="10">
-        </div>
-        <div class="product-subtotal">$856</div>
-    </div>
-
-    <div class="cart-product-details">
-        <div class="cart-product-img">
-            <div class="cart-delete">&times;</div>
-            <img src="images/game.png" alt="Gaming Controller">
-            <p>Gaming Controller</p>
-        </div>
-        <div class="product-price">$767</div>
-        <div class="product-quantity">
-            <input type="number" value="1" min="1" max="10">
-        </div>
-        <div class="product-subtotal">$856</div>
-    </div>
-
-    <div class="cart-product-details">
-        <div class="cart-product-img">
-            <div class="cart-delete">&times;</div>
-            <img src="images/playstation.png" alt="Play Station">
-            <p>Play Station</p>
-        </div>
-        <div class="product-price">$767</div>
-        <div class="product-quantity">
-            <input type="number" value="1" min="1" max="10">
-        </div>
-        <div class="product-subtotal">$856</div>
-    </div>
-</div>
-
-<style>
-.cart-products {
-    padding-top: 5%;
-    display: flex;
-    flex-direction: column;
-    gap: 45px;
+/* General styling for the product */
+.product {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-.cart-product-details {
-    display: flex;
-    padding: 20px 45px;
-    justify-content: space-between;
-    box-shadow: 0 0 7px 5px rgba(228, 228, 228, 0.2);
-    border-radius: 5px;
-    align-items: center;
+.product:hover {
+    transform: scale(1.05);
 }
 
-.cart-product-details div {   
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.cart-product-img {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.intp {
     position: relative;
-}
-
-.cart-product-img img {
-    height: 54px;
-    width: 54px;
-}
-
-.cart-product-img p {
-    margin: 0;
-}
-
-.cart-delete {
-    background-color: red;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    color: white;
-    cursor: pointer;
-    position: absolute;
-    top: -5px;
-    left: -5px;
-}
-
-.cart-delete:hover {
-    transform: scale(1.2);
-}
-
-.product-quantity input {
-    height: 44px;
-    width: 72px;
-    font-size: 14px;
-    background-color: white;
     text-align: center;
-    border: 2px solid black;
 }
 
-input[type="number"]::-webkit-inner-spin-button {
-    opacity: 1;
-    height: 30px;
+.ooff {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: red;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
 }
+
+.photo img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.eyelogo {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.eyelogo i {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.addto-cart {
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addto-cart p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.productname {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.p-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.rating p {
+    font-size: 1rem;
+    color: #ffa500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product {
+        padding: 10px;
+    }
+
+    .ooff {
+        font-size: 0.9rem;
+    }
+
+    .p-name {
+        font-size: 1rem;
+    }
+
+    .price {
+        font-size: 1.2rem;
+    }
+
+    .addto-cart {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        padding: 8px;
+    }
+
+    .photo img {
+        width: 100%;
+    }
+
+    .eyelogo i {
+        font-size: 1rem;
+    }
+
+    .p-name {
+        font-size: 0.9rem;
+    }
+
+    .price {
+        font-size: 1rem;
+    }
+}
+
 </style>
 
 </body>

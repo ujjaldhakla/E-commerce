@@ -18,6 +18,16 @@ body input{
 }
 /* HEADER PART */
 /* offer */
+.stickyinav{
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 200;
+  
+}
+.top{
+  background-color: #000000;
+}
 .top-header-container{
   background-color: black;
   color: white;
@@ -25,7 +35,7 @@ body input{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 120px;
+  
   font-weight: 'inter';
 }
 .shopnow-button a{
@@ -41,7 +51,8 @@ body input{
 }
 .top-header-text{
   display: flex;
-  padding-left:20% ;
+width: 100%;
+justify-content: center;
   gap: 10px;
 }
 

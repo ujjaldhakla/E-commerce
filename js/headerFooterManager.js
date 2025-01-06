@@ -2,6 +2,8 @@
 class SpecialHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
+        <div class="top">
+        <div class="container">
         <div class="top-header-container">
             <div class="top-nav">
                 <div class="top-header-text">
@@ -24,7 +26,9 @@ class SpecialHeader extends HTMLElement {
             </div>
             </div>
         </div>
-       
+        </div>
+       </div>
+       <div class="stickyinav">
             <div class="container">
                 <div class="header-container">
                     <div class="eh">
@@ -61,6 +65,7 @@ class SpecialHeader extends HTMLElement {
                 </div>
             </div>
              <div class="line">
+        </div>
         </div>`
     }
 }

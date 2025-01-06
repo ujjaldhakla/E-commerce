@@ -32,10 +32,10 @@ document.querySelector('.speaker-second').textContent = `${seconds} `;
                 el: '.swiper-pagination',
                 clickable: true, // Allows clicking on pagination bullets
             },
-            autoplay: {
-                delay: 3000, // Auto-swipe every 3 seconds
-                disableOnInteraction: false, // Keeps autoplay active even after user interaction
-            },
+            // autoplay: {
+            //     delay: 3000, // Auto-swipe every 3 seconds
+            //     disableOnInteraction: false, // Keeps autoplay active even after user interaction
+            // },
         });
     });
  // offer swipper end
