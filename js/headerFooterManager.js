@@ -31,6 +31,20 @@ class SpecialHeader extends HTMLElement {
        <div class="stickyinav">
             <div class="container">
                 <div class="header-container">
+                    <div class="burger-menu" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+     <div class="menu">
+     <div class="cross" >&times;</div>
+                            <div class="home"><a href="Ecommerce.html " >Home</a></div>
+                            <div class="contact"><a href="contactus.html">Contact</a></div>
+                            <div class="about"><a href="about.html">About</a></div>
+                            <div class="sign-upp"><a href="Sign-up.html">Sign-Up</a></div>
+                        </div>
+     
+
                     <div class="eh">
                         <div class="line-nav">Exclusive</div>
                         <div class="homes">
@@ -78,9 +92,9 @@ class SpecialFooter extends HTMLElement {
             <div class="container">
                 <div class="footer">
                     <div class="Exclusive">
-                        <h2>Exclusive</h2>
-                        <h4>Subscribe</h4>
-                        <p>Get 10% off your first order</p>
+                        <h3>Exclusive</h3>
+                        <p>Subscribe</p>
+                        <h6>Get 10% off your first order</h6>
                         <div class="input-container">
                             <input type="text" placeholder="Enter your email">
                             <button class="logo-button" type="button">
@@ -89,29 +103,29 @@ class SpecialFooter extends HTMLElement {
                         </div>
                     </div>
                     <div class="support">
-                        <h4>Support</h4>
-                        <p>Kathmandu, Balkumari, Nepal</p>
-                        <p>Udhakal610@gmail.com</p>
-                        <p>9842263072</p>
+                        <p>Support</p>
+                        <h6>Kathmandu, Balkumari, Nepal</h6>
+                        <h6>Udhakal610@gmail.com</h6>
+                        <h6>9842263072</h6>
                     </div>
                     <div class="account">
-                        <h4>Account</h4>
-                        <p><a href="Account.html">My Account</a></p>
-                        <p><a href="Sign-up.html">Login / Register</a></p>
-                        <p><a href="cart.html">Cart</a></p>
-                        <p><a href="wishlist.html">Wishlist</a></p>
-                        <p><a href="shop.html">Shop</a></p>
+                        <p>Account</p>
+                        <h6><a href="Account.html">My Account</a></h6>
+                        <h6><a href="Sign-up.html">Login / Register</a></h6>
+                        <h6><a href="cart.html">Cart</a></h6>
+                        <h6><a href="wishlist.html">Wishlist</a></h6>
+                        <h6><a href="shop.html">Shop</a></h6>
                     </div>
                     <div class="quicklink">
-                        <h4>Quick Links</h4>
-                        <p><a href="privacy.html">Privacy Policy</a></p>
-                        <p><a href="terms.html">Terms of Use</a></p>
-                        <p><a href="faq.html">FAQ</a></p>
-                        <p><a href="contactus.html">Contact</a></p>
+                        <p>Quick Links</p>
+                        <h6><a href="privacy.html">Privacy Policy</a></h6>
+                        <h6><a href="terms.html">Terms of Use</a></h6>
+                        <h6><a href="faq.html">FAQ</a></h6>
+                        <h6><a href="contactus.html">Contact</a></h6>
                     </div>
                     <div class="downloadapp">
-                        <h4>Download App</h4>
-                        <p>Save $3 with the app for new users only</p>
+                        <p>Download App</p>
+                        <h6>Save $3 with the app for new users only</h6>
                         <div class="social-icons">
                             <i class="fa-brands fa-facebook-f"></i>
                             <i class="fa-brands fa-twitter"></i>
@@ -148,6 +162,8 @@ class SpecialHead extends HTMLElement {
         <link rel="stylesheet" href="css/headerfooter.css">
          <link rel="stylesheet" href="css/cart.css">
          <link rel="stylesheet" href="css/checkOut.css">
+         <link rel="stylesheet" href="css/boot-strap.css">
+
         <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">

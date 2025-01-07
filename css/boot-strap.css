@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background-color: white;
+  }
+  body p{
+    font-family: 'poppins';
+    margin: 0;
+    padding: 0;
+font-size: 16px;
+  }
+ 
+  body button{
+    cursor: pointer;
+  }
+  body h1{
+    font-size: 48px;
+  }
+  body h2{
+font-size: 36px;
+}
+body h3{
+    font-size: 24px;
+    }
+    body h4{
+        font-size: 20px;
+        font-weight: 600;
+        }
+        body h6{
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+body a{
+text-decoration: none;
+}
+body img{
+    width: 100%;
+}
+@media only screen and (max-width:995px){
+  body p{
+    font-size: 14px;
+  }
+  body h1{
+    font-size: 38px;
+  }
+  body h2{
+    font-size: 34px;
+    }
+    body h3{
+      font-size: 20px;
+      }
+      body h4{
+        font-size: 18px;
+        }
+        body h6{
+          font-size: 11px;
+          
+      }
+}
+@media only screen and (max-width:800px){
+  body p{
+    font-size: 12px;
+  }
+  body h1{
+    font-size: 34px;
+  }
+  body h2{
+    font-size: 30px;
+    }
+    body h3{
+      font-size: 18px;
+      }
+      body h4{
+        font-size: 16px;
+        }
+        body h6{
+          font-size: 10px;
+          
+      }
+}
+@media only screen and (max-width:700px){
+  body p{
+    font-size: 10px;
+  }
+  body h1{
+    font-size: 28px;
+  }
+  body h2{
+    font-size: 25px;
+    }
+    body h3{
+      font-size: 16px;
+      }
+      body h4{
+        font-size: 14px;
+        }
+        body h6{
+          font-size: 9px;
+          
+      }
+}

@@ -43,12 +43,19 @@ document.querySelector('.speaker-second').textContent = `${seconds} `;
  document.addEventListener('DOMContentLoaded', function () {
 
       var swiper = new Swiper('.myproducts', {
-        slidesPerView: 4,
+        slidesPerView: 3,
         direction: getDirection(),
         navigation: {
           nextEl: '#nextEll',
           prevEl: '#prevEll',
         },
+        breakpoints: {
+          // For screens smaller than 750px
+          750: {
+              slidesPerView: 4,  // Show only 1 slide
+              // direction: 'horizontal',  // Force horizontal layout for smaller screens
+          }
+      },
         on: {
           resize: function () {
             swiper.changeDirection(getDirection());
@@ -124,4 +131,17 @@ window.onload = function () {
       }
   });
 };
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  function toggleMenu() {
+      const menu = document.querySelector('.menu');
+      menu.classList.toggle('active');
+  }
+
+  // Attaching the event listener to the burger menu element
+  document.querySelector('.burger-menu').addEventListener('click', toggleMenu);
+
+ 
+document.querySelector('.cross').addEventListener('click', toggleMenu);
 });

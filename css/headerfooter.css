@@ -61,6 +61,8 @@ justify-content: center;
   color: white;
   border: 0px;
 }
+
+
 /* offer close */
 
 
@@ -70,6 +72,9 @@ justify-content: center;
   padding: 2% 0;
   flex-wrap: wrap;
   font-weight: 'poppins';
+}
+@media only screen and(max-width:995px){
+
 }
 .eh{
   display: flex;
@@ -85,7 +90,7 @@ justify-content: center;
 .homes{
   display: flex;
   text-wrap:nowrap;
-  gap: 25px;
+ justify-content: space-between;
   font-size: 21px;
   font-weight:100;
 }
@@ -263,7 +268,9 @@ justify-content: center;
   
   
 }
-
+.menu{
+  display: none;
+}
 .menu-option:hover {
   background-color: rgba(237, 235, 235, 0.5);
   width: 100%;
@@ -283,6 +290,80 @@ height: 24px;
 .menu-option a{
   color: white;
 }
+@media only screen and (max-width: 995px) {
+  .top-header-container{
+    height: 2rem;
+  }
+  .footer h6{
+    font-size: 11px;
+  }
+  .homes{
+    display: none;
+
+}
+.header-container{
+  display: flex;
+  padding: 1% 0;
+  justify-content: space-between;
+}
+.eh{
+  display: flex;
+  justify-content: space-between;
+  width:90%;
+}
+.burger-menu{
+ 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px;
+
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: black;
+}
+
+.menu{
+  position: fixed;
+    top: 0px;
+    left: 0;
+    width: 50vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    transform: translatex(-100%);
+    transition: transform 0.5s ease;
+    z-index: 1000;
+    padding: 70px 80px;
+  font-size: large;
+}
+.menu a {
+ 
+  text-decoration: none;
+  color: white;
+  width: fit-content;
+}
+
+.menu.active {
+  transform: translatex(0);
+}
+.cross {
+  position: absolute;
+  top: 20px;
+  left: 70px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+}
 
 /* Footer  */
 
@@ -301,20 +382,22 @@ height: 24px;
   grid-template-areas: 
   "exclusive support account quicklink downloadapp "
   ;
-gap: 2rem;
+  justify-content: space-between;
+/* gap: 2rem; */
 }
-.footer h2{
-font-size: 24px;
+.footer h3{
+
 padding-bottom: 5%;
+padding-bottom: 9px;
 font-weight: bolder;
 }
-.footer h4{
-  font-size: 16px;
-  padding-bottom: 5%;
-}
 .footer p{
-  font-size: 11px;
-  padding-bottom: 5px;
+  
+  padding-bottom: 24px;
+}
+.footer h6{
+  
+  padding-bottom: 15px;
 }
 .Exclusive{
   grid-area: exclusive;
@@ -372,9 +455,7 @@ font-weight: bolder;
   grid-area: quicklink;
   border: none;
 }
-.quicklink p{
-  border: none;
-}
+
 .downloadapp{
   grid-area:downloadapp;
 }
@@ -409,9 +490,7 @@ font-weight: bolder;
   gap: 2px;
 
 }
-.last-futter p{
-  margin-bottom: 0;
-}
+
 .line-container a{
   text-decoration: none;
   color: black;
