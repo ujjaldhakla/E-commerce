@@ -57,10 +57,10 @@
     padding: 3% 0;
     border: none;
 }
-.login p{
+.go-login p{
     display: flex;
     justify-content: center;
-    color: rgb(197, 194, 194);
+    color: rgb(51, 45, 45);
    
 }
 .sign-up-with-google button{
@@ -68,8 +68,23 @@
     padding: 3% 0;
     background-color: white;
 }
-.login a{
+.go-login a{
     text-decoration:underline;
     padding-left: 10px;
     color: black;
+}
+@media only screen and (max-width:550px){
+    .sign-up {
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .sign-up-image {
+        width:100% ;
+        height: 80%;
+    }
+    .go-login{
+        display: flex;
+        
+    }
 }

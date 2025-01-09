@@ -43,7 +43,7 @@ document.querySelector('.speaker-second').textContent = `${seconds} `;
  document.addEventListener('DOMContentLoaded', function () {
 
       var swiper = new Swiper('.myproducts', {
-        slidesPerView: 3,
+        slidesPerView: 2,
         direction: getDirection(),
         navigation: {
           nextEl: '#nextEll',
@@ -53,7 +53,7 @@ document.querySelector('.speaker-second').textContent = `${seconds} `;
           // For screens smaller than 750px
           750: {
               slidesPerView: 4,  // Show only 1 slide
-              // direction: 'horizontal',  // Force horizontal layout for smaller screens
+              direction: 'horizontal',  // Force horizontal layout for smaller screens
           }
       },
         on: {
@@ -65,7 +65,7 @@ document.querySelector('.speaker-second').textContent = `${seconds} `;
     
       function getDirection() {
         var windowWidth = window.innerWidth;
-        var direction = windowWidth <= 760 ? 'vertical' : 'horizontal';
+        var direction = windowWidth <= 760 ? 'horizontal' : 'horizontal';
         return direction;
       }
     });
@@ -80,18 +80,18 @@ document.querySelector('.speaker-second').textContent = `${seconds} `;
       nextEl: '#nextll',
       prevEl: '#prevll',
     },
-    on: {
-      resize: function () {
-        swiper.changeDirection(getDirection());
-      },
-    },
+    // on: {
+    //   resize: function () {
+    //     swiper.changeDirection(getDirection());
+    //   },
+    // },
   });
 
-  function getDirection() {
-    var windowWidth = window.innerWidth;
-    var direction = windowWidth <= 760 ? 'vertical' : 'horizontal';
-    return direction;
-  }
+  // function getDirection() {
+  //   var windowWidth = window.innerWidth;
+  //   var direction = windowWidth <= 760 ? 'vertical' : 'horizontal';
+  //   return direction;
+  // }
 });
 
 // prosucts swiper end
@@ -133,15 +133,55 @@ window.onload = function () {
 };
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  function toggleMenu() {
-      const menu = document.querySelector('.menu');
-      menu.classList.toggle('active');
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  var swiper = new Swiper('.catog', {
+    slidesPerView: 3,
+    direction: getDirection(),
+    navigation: {
+      nextEl: '#nextEll',
+      prevEl: '#prevEll',
+    },
+    breakpoints: {
+      // For screens smaller than 750px
+      750: {
+          slidesPerView: 6,  // Show only 1 slide
+          direction: 'horizontal',  // Force horizontal layout for smaller screens
+      }
+  },
+    on: {
+      resize: function () {
+        swiper.changeDirection(getDirection());
+      },
+    },
+  });
+
+  function getDirection() {
+    var windowWidth = window.innerWidth;
+    var direction = windowWidth <= 760 ? 'horizontal' : 'horizontal';
+    return direction;
   }
-
-  // Attaching the event listener to the burger menu element
-  document.querySelector('.burger-menu').addEventListener('click', toggleMenu);
-
- 
-document.querySelector('.cross').addEventListener('click', toggleMenu);
 });
+
+
+
+function cutSefv(element) {
+  const messageDiv = document.querySelector('.messg');
+  const schildElement = element.parentElement.querySelector('.schild');
+  const schildContent = schildElement.innerHTML;
+
+  // Toggle logic
+  if (messageDiv.classList.contains('hidden')) {
+      messageDiv.innerHTML = schildContent;
+      messageDiv.classList.remove('hidden'); // Show message
+      messageDiv.style.display = 'flex';
+  } else {
+      messageDiv.classList.add('hidden'); // Hide message
+      messageDiv.style.display = 'none';
+  }
+}
+
+
+

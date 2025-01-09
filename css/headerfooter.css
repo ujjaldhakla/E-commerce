@@ -73,9 +73,7 @@ justify-content: center;
   flex-wrap: wrap;
   font-weight: 'poppins';
 }
-@media only screen and(max-width:995px){
 
-}
 .eh{
   display: flex;
   justify-content: space-between;
@@ -104,22 +102,26 @@ justify-content: center;
   display: flex;
   flex-wrap: nowrap;
   overflow: hidden;
-  background-color:  rgb(248, 246, 246);
+  background-color:  rgb(241, 241, 241);
   border-radius: 5px;
   width: fit-content;
-  gap: 2px;
+  
 }
-.search button{
-  border: 0;
-  padding: 3px;
-}
+
 .search input{
+  
   width: 100%;
   font-size: 16px;
   padding-left: 3px;
+  background-color:  rgb(241, 241, 241);
 }
-.search button i {
+.search button{
+  border: 0;
+  background-color: rgb(241, 241, 241); 
+}
+.search  button i  {
   font-size: 21px;
+   
 }
 /* General Styling */
 .homes {
@@ -288,7 +290,7 @@ height: 24px;
   
 }
 .menu-option a{
-  color: white;
+  color: rgb(252, 250, 250);
 }
 @media only screen and (max-width: 995px) {
   .top-header-container{
@@ -365,6 +367,102 @@ height: 24px;
 }
 }
 
+  @media only screen and (max-width: 550px) {
+    .top-header-container{
+      padding-top: 9px;
+     padding: 3px 0;
+    }
+    .top-header-container p{
+      font-size: 9px;
+    }
+    .top-nav{
+      gap: 1%;
+    }
+    .footer h6{
+      font-size: 11px;
+    }
+    .stickyinav{
+      top: 0;
+      position: sticky;
+    }
+    .search{
+      width: 170px;
+    }
+    .search input{
+      font-size: 14px;
+    }
+  .header-container{
+    display: flex;
+    padding: 15px 0;
+    justify-content: space-between;
+  }
+  .icons{
+    display: none;
+
+  }
+  .eh{
+    display: flex;
+    justify-content: space-between;
+
+    width:85%;
+  }
+  .burger-menu{
+   
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 0px;
+  
+  }
+  
+  .bar {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+  }
+  
+  .menu{
+    position: fixed;
+      top: 0px;
+      left: 0;
+      width: 80vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      transform: translatex(-100%);
+      transition: transform 0.5s ease;
+      z-index: 1000;
+      padding: 80px 30px;
+    font-size: large;
+    gap: 20px;
+  }
+  .menu a {
+   
+    text-decoration: none;
+    color: white;
+    width: fit-content;
+    
+  }
+  
+  .menu.active {
+    transform: translatex(0);
+  }
+  .cross {
+    position: absolute;
+    top: 15px;
+  left: 70vw;
+    font-size: 2rem;
+    color: white;
+  }
+
+  }
+
+
 /* Footer  */
 
 .contactt{
@@ -373,12 +471,13 @@ height: 24px;
   margin-top: 10%;
   padding-top: 3%;
   padding-bottom: 0;
-  display: block;
+  /* display: block; */
 }
  .footer{
   display: grid;
   padding-bottom: 3%;
   grid-template-columns: repeat(5 1fr);
+  grid-template-rows: 1fr;
   grid-template-areas: 
   "exclusive support account quicklink downloadapp "
   ;
@@ -410,17 +509,19 @@ font-weight: bolder;
 }
 .input-container {
   position: relative;
-  width: fit-content;
-  font-size: 11px;
-  
-  
+  width: max-content;
+  font-size: 14px;
+  display: flex;
+  border-radius: 5px;
+  border: 2px solid #ffffff;
+
 }
 
 .input-container input {
   width: fit-content;
-  padding: 5%;
-  padding-right: 25px; 
-  border: 2px solid #ffffff;
+  padding: 5% 2px;
+ padding-right: 20px;
+  
   border-radius: 5px;
   background-color: #000000;
   color: white;
@@ -428,17 +529,19 @@ font-weight: bolder;
 }
 .logo-button {
   position: absolute;
-  top: 50%;
+  top: 20px;
   right: 5px; 
   transform: translateY(-50%);
   border: none;
   background: transparent;
   padding: 0;
   cursor: pointer;
+
 }
-.logo-button svg {
+.logo-button i{
   width: 22px; 
   height: 24px;
+  background-color: #000000;
   color: white;
 }
 .support{
@@ -498,5 +601,44 @@ font-weight: bolder;
 .line-container a:hover{
   color: #DB4444;
 } 
+@media only screen and (max-width: 995px) {
+  .footer{
+    grid-template-columns: repeat(2 1fr); 
+    grid-template-rows:200px 200px 200px ;
+    grid-template-areas: 
+  "exclusive support  "
+  "account    quicklink  "
+  "downloadapp   .                 "
+  ;
+  justify-content: space-evenly;
+  }
+  .footer p{
+font-size: 16px;
+font-weight: bold;
+}
+.footer h3{
+  font-size: 18px;
+  }
+  .downloadapp{
+padding-top: 20px;
+  }
+  .logo-button {
+    position: absolute;
+    top: 16px;
+   right: 0;
+    transform: translateY(-50%);
+    border: none;
+    background: black;
+    padding: 0;
+    cursor: pointer;
+   margin: 0;
   
 
+  }
+  .logo-button i{
+    width: 29px; 
+    height: 14px;
+    background-color: #000000;
+    color: white;
+  }
+}

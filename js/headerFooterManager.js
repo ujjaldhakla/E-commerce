@@ -1,6 +1,7 @@
 
 class SpecialHeader extends HTMLElement {
     connectedCallback() {
+        
         this.innerHTML = `
         <div class="top">
         <div class="container">
@@ -9,18 +10,18 @@ class SpecialHeader extends HTMLElement {
                 <div class="top-header-text">
                     <p>Summer Sale For All Swim Suits and Free Express Delivery - OFF 50%!</p>
                      <div class="shopnow-button">
-                    <a href="#">Shop Now</a>
+                    <a href="#"><p>Shop Nowp</p></a>
                 </div>
                 </div>
                
             
             <div class="language">
                 <div class="language-dropdown">
-                    <select id="language">
-                        <option value="English">English</option>
+                    <select id="language"><p>
+                        <option value="English"><p>English</p></option>
                         <option value="Nepali">Nepali</option>
                         <option value="Hindi">Hindi</option>
-                        <option value="Spanish">Spanish</option>
+                        <option value="Spanish">Spanish</option></p>
                     </select>
                 </div>
             </div>
@@ -39,9 +40,15 @@ class SpecialHeader extends HTMLElement {
      <div class="menu">
      <div class="cross" >&times;</div>
                             <div class="home"><a href="Ecommerce.html " >Home</a></div>
-                            <div class="contact"><a href="contactus.html">Contact</a></div>
-                            <div class="about"><a href="about.html">About</a></div>
-                            <div class="sign-upp"><a href="Sign-up.html">Sign-Up</a></div>
+                            <div class="home"><a href="contactus.html">Contact</a></div>
+                            <div class="home"><a href="about.html">About</a></div>
+                            <div class="home"><a href="cart.html">Cart</a></div>
+                            <div class="home"><a href="Sign-up.html">Sign-Up</a></div>
+                            <div class="home"><a href="Account.html">Manage My Account</a></div>
+                            <div class="home" onclick="alert('Thanks for your review!')">My Reviews</div>
+                            <div class="home" onclick="alert('Your account has been logged out!')">Logout</div>
+                            <div class="home" onclick="alert('Your order is cancelled!')">Order Cancelled</div>
+                            <div class="home" onclick="alert('My Orders clicked!')">My Orders</div>
                         </div>
      
 
@@ -55,8 +62,9 @@ class SpecialHeader extends HTMLElement {
                         </div>
                              <div class="alogo">
                         <div class="search">
-                            <input type="text" placeholder="What are you looking for?">
-                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                             <input type="text" placeholder="What are you looking for?" > 
+                              <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                          
                         </div>
                         <div class="icons">
                             <div class="icon1"><i class="fa-regular fa-heart"></i></div>
@@ -86,8 +94,8 @@ class SpecialHeader extends HTMLElement {
 
 class SpecialFooter extends HTMLElement {
     connectedCallback() {
-        console.log('SpecialHeader rendered');
-        this.innerHTML = `
+       
+        this.innerHTML =`
         <div class="contactt">
             <div class="container">
                 <div class="footer">
@@ -175,7 +183,16 @@ class SpecialHead extends HTMLElement {
         `;
     }
 }
-
+document.addEventListener('DOMContentLoaded', () => {
+    function toggleMenu() {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('active');
+    }
+  
+    // Attaching the event listener to the burger menu element
+    document.querySelector('.burger-menu').addEventListener('click', toggleMenu);
+  document.querySelector('.cross').addEventListener('click', toggleMenu);
+  });
 customElements.define('special-head', SpecialHead);
 customElements.define('special-header', SpecialHeader);
 customElements.define('special-footer', SpecialFooter);

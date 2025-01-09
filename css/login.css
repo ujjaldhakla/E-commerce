@@ -3,8 +3,7 @@
 .login {
     display: flex;
     padding-top: 5%;
-    margin-left: 8%;
-    margin-right: 8%;
+    
     justify-content: space-between;
     font-family: 'poppins';
 
@@ -30,10 +29,7 @@
     justify-content: center;
 }
 
-.texts h1 {
-    font-size: 36px;
 
-}
 .texts p{
     display: flex;
     justify-content: start;
@@ -72,4 +68,25 @@
     color: white;
     text-decoration: none;
    
+}
+@media only screen and (max-width:550px){
+    .login {
+        display: flex;
+        flex-direction: column;
+     
+        
+    
+    } 
+    .login-image {
+        display: flex;
+        height: 40%;
+        width: 100%;
+        background-color: #CBE4E8;
+    }
+    .login-account {
+        padding-top: 10px;
+        display: flex;
+        gap: 30px;
+        
+    }
 }

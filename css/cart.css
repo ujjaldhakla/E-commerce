@@ -1,10 +1,4 @@
-body p,
-h1,
-h2,
-h6 {
-    margin: 0;
-    padding: 0;
-}
+
 
 body img {
     width: 100%;
@@ -41,7 +35,7 @@ body img {
     /* border: 1px solid black; */
     padding: 20px 45px;
     justify-content: space-between;
-    box-shadow: 0 0 7px 5px rgba(130, 129, 129, 0.282);
+    box-shadow: 0 0 7px 5px rgba(130, 129, 129, 0.119);
     border-radius: 5px;
     /* gap: 332px; */
 
@@ -197,4 +191,80 @@ border-radius: 5px;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+}
+@media only screen and (max-width:550px){
+  
+.cart-titles {
+   
+    padding: 25px 5px;
+    margin-top: 5%;
+   
+    box-shadow: 0 0 7px 5px rgba(130, 129, 129, 0.119);
+   
+
+}  
+.cart-titles :nth-child(1){
+    display: flex;
+    justify-content: center;
+    width: 140px;
+}
+.cart-products {
+    padding-top: 5%;
+   
+    gap: 20px;
+}
+.cart-product-details {
+   
+    padding: 20px 5px;
+    
+ 
+}
+.cart-product-img img {
+    height: 44px;
+    width: 44px;
+    
+}
+.cart-product-img{
+    position: relative;
+width: 140px;
+}
+.cart-product-img p{
+    padding-left: 4px;
+}
+.product-quantity input {
+    height: 44px;
+    width: 32px;
+   
+
+}
+.product-quantity input[type="number"] {
+    
+    width: 54px;
+    padding: 5px;
+   
+
+}
+.return-shop-update-cart-button button{
+    padding: 12px 15px;
+   
+}
+.coupon-checkout{
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 100%;
+   
+    padding-top: 5%;
+}
+.coupon-input{
+    width: 60%;
+}
+.coupon-button{
+    width: 40%;
+    display: flex;
+    justify-content: start;
+}
+.process-checkout a button{
+    padding: 2px 15px;
+     height: 40px;
+ }
 }

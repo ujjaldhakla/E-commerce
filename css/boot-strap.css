@@ -3,14 +3,33 @@
     padding: 0;
     box-sizing: border-box;
   }
+  body p,
+h1,
+h2,
+h6 {
+    margin: 0;
+    padding: 0;
+}
   body{
     background-color: white;
+    overflow-x: hidden;
   }
   body p{
     font-family: 'poppins';
     margin: 0;
     padding: 0;
 font-size: 16px;
+  }
+  body ul {
+    list-style-type: none; /* Removes text indentation */
+    padding-left: 0; /* Removes default left padding */
+    margin-left: 0; /* Removes default left margin */
+  }
+  .container{
+    margin-left:50px;
+    margin-right: 50px;
+    font-family: "poppins";
+    overflow-x: hidden;
   }
  
   body button{
@@ -100,6 +119,33 @@ body img{
         }
         body h6{
           font-size: 9px;
+          
+      }
+}
+@media only screen and (max-width:550px){
+
+  .container{
+    margin-left:10px;
+    margin-right: 10px;
+    
+  }
+  body p{
+    font-size: 14px;
+  }
+  body h1{
+    font-size: 24px;
+  }
+  body h2{
+    font-size: 20px;
+    }
+    body h3{
+      font-size: 18px;
+      }
+      body h4{
+        font-size: 16px;
+        }
+        body h6{
+          font-size: 11px;
           
       }
 }
