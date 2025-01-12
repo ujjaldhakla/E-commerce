@@ -340,8 +340,8 @@ justify-content: space-between;
   padding:0 3% ;
 }
 .photo{
-  width: 70%;
-  height: 70%;
+  width: 200px;
+  height: 300px;
   padding: 50px 0;
 }
 .photo img{
@@ -466,8 +466,8 @@ font-size: 20px;
     padding:0 1% ;
   }
   .photo{
-    width: 70%;
-    height: 70%;
+    width: 100px;
+    height: 200px;
     padding: 40px 0;
   }
   .eyelogo{
@@ -1087,8 +1087,9 @@ gap: 3px;
       height: 100px;
     }
 .hidden{
-  display: none;
-     
+  display: none;   
 }
-
+  }
+  #products-container{
+    display: flex;
   }
