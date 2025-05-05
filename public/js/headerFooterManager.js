@@ -72,7 +72,7 @@ class SpecialHeader extends HTMLElement {
                                     <div class="menu-option" onclick="alert('My Orders clicked!')"><i class="fa-solid fa-bag-shopping"></i>My Orders</div>
                                     <div class="menu-option" onclick="alert('Your order is cancelled!')"><i class="fa-regular fa-circle-xmark"></i>Order Cancelled</div>
                                     <div class="menu-option" onclick="alert('Thanks for your review!')"><i class="fa-regular fa-star"></i>My Reviews</div>
-                                    <div class="menu-option" onclick="alert('Your account has been logged out!')"><a href="/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></div>
+                                    <div class="menu-option" onclick="alert('Your account has been logged out!')"><i class="fa-solid fa-arrow-right-from-bracket"></i><a href="/logout">Logout</a></div>
                                 </div>
                                 </span>
                             </div>

@@ -67,12 +67,8 @@
    
     border: none;
 }
-.login-and-forget{
-    display: flex;
-    padding: 3% 0;
-    gap: 20%;
-}
-.forget-password{
+
+.login-account a{
     color: #DB4444;
 }
 .login-button a{
@@ -96,6 +92,7 @@
     }
     .login-account {
         padding-top: 10px;
+        padding-bottom: 10px;
         display: flex;
         gap: 30px;
         

@@ -76,9 +76,24 @@ app.post('/login', (req, res) => {
         }
     });
 });
+// app.get('/get-username', (req, res) => {
+//     const userId = req.query.username; // Pass userId as query parameter
+//     const query = `SELECT username FROM users WHERE id = ?`;
 
+//     db.query(query, [userId], (err, results) => {
+//         if (err) {
+//             return res.status(500).send('Error fetching username');
+//         }
+//         if (results.length > 0) {
+//             res.json({ username: results[0].username });
+//         } else {
+//             res.status(404).send('User not found');
+//         }
+//     });
+// });
 // Home page route (protected)
 app.get('/home', (req, res) => {
+
     if (!req.session.userId) {
         return res.redirect('/login');
     }

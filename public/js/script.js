@@ -22,7 +22,7 @@ document.getElementById('signupForm')?.addEventListener('submit', async function
     e.preventDefault();
 
     // Collecting input values
-    const username = document.getElementById('username').value;
+    const username = document.getElementById('usernamee').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 

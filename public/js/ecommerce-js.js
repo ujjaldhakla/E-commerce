@@ -43,7 +43,7 @@ document.querySelector('.speaker-second').textContent = `${seconds} `;
  document.addEventListener('DOMContentLoaded', function () {
 
       var swiper = new Swiper('.myproducts', {
-        slidesPerView: 2,
+        slidesPerView: 2.3,
         direction: getDirection(),
         navigation: {
           nextEl: '#nextEll',
@@ -138,7 +138,7 @@ window.onload = function () {
 document.addEventListener('DOMContentLoaded', function () {
 
   var swiper = new Swiper('.catog', {
-    slidesPerView: 3,
+    slidesPerView: 3.3,
     direction: getDirection(),
     navigation: {
       nextEl: '#nextEll',
