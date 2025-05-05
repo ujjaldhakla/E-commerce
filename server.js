@@ -2,17 +2,51 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcryptjs');
 const session = require('express-session');
+const MySQLStore = require('express-mysql-session')(session);
 const db = require('./db');
+const path = require('path');
 require('dotenv').config();
 
 const app = express();
+
+// Configure MySQL session store
+const sessionStore = new MySQLStore({
+    host: process.env.DB_HOST || 'localhost',
+    port: process.env.DB_PORT || 3306,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    createDatabaseTable: true,
+    schema: {
+        tableName: 'sessions',
+        columnNames: {
+            session_id: 'session_id',
+            expires: 'expires',
+            data: 'data'
+        }
+    }
+}, db);
+
+// Middleware setup
 app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use(session({
-    secret: 'your_secret_key',
+    secret: process.env.SESSION_SECRET || 'your_secret_key',
+    store: sessionStore,  // Using MySQL store instead of MemoryStore
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: false,  // Changed to false for security
+    cookie: {
+        maxAge: 24 * 60 * 60 * 1000, // 1 day
+        secure: process.env.NODE_ENV === 'production',
+        httpOnly: true
+    }
 }));
+
+// [Rest of your existing routes remain exactly the same...]
+// Signup, Login, Home, Logout routes go here unchanged
+
+// Start server
+
 
 // Signup route
 // app.post('/signup', async (req, res) => {
@@ -78,7 +112,7 @@ app.post('/login', (req, res) => {
 });
 // app.get('/get-username', (req, res) => {
 //     const userId = req.query.username; // Pass userId as query parameter
-//     const query = `SELECT username FROM users WHERE id = ?`;
+//     const query = SELECT username FROM users WHERE id = ?;
 
 //     db.query(query, [userId], (err, results) => {
 //         if (err) {
@@ -118,8 +152,7 @@ app.get('/signup', (req, res) => {
 });
 
 // Start server
-app.listen(3000, () => {
-    console.log('Server running at http://localhost:3000');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
 });
-
-
