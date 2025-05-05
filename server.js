@@ -6,6 +6,7 @@ const MySQLStore = require('express-mysql-session')(session);
 const db = require('./db');
 const path = require('path');
 require('dotenv').config();
+const { pool } = require('./db');
 
 const app = express();
 
@@ -31,16 +32,16 @@ const sessionStore = new MySQLStore({
 app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use(session({
-    secret: process.env.SESSION_SECRET || 'your_secret_key',
-    store: sessionStore,  // Using MySQL store instead of MemoryStore
+    store: new MySQLStore({
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME
+    }),
+    secret: process.env.SESSION_SECRET,
     resave: false,
-    saveUninitialized: false,  // Changed to false for security
-    cookie: {
-        maxAge: 24 * 60 * 60 * 1000, // 1 day
-        secure: process.env.NODE_ENV === 'production',
-        httpOnly: true
-    }
-}));
+    saveUninitialized: false
+  }));
 
 // [Rest of your existing routes remain exactly the same...]
 // Signup, Login, Home, Logout routes go here unchanged
